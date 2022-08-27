@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do</title>
+    <!-- Style File -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@400;500&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Application -->
+      <div class="application">
+        <!-- Header App -->
+        <div class="app-header">
+          <span class="app-header-title">to do application</span>
+          <img
+            src="./image/icons8-bookmark.svg"
+            class="app-header-img"
+            alt=""
+          />
+        </div>
+        <!-- Add New Task -->
+        <div class="app-info">
+          <div class="app-info-input">
+            <input type="text" id="task-text" />
+          </div>
+          <div class="app-info-button">
+            <button id="task-add">
+              <span>new task</span>
+              <img src="./image/icons8-add-list-96.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <!-- Tasks Search -->
+        <div class="app-search">
+          <input type="text" id="search" placeholder="Search Tasks" />
+        </div>
+        <!-- Tasks filter -->
+        <div class="app-filter">
+          <div class="buttons-section">
+            <div class="btn-title">
+              <span>all tasks</span>
+            </div>
+            <div class="btn-all">
+              <!-- Add Class show -->
+              <div class="btn" id="all"><span>all tasks</span></div>
+              <div class="btn" id="done"><span>done tasks</span></div>
+              <div class="btn" id="unfinished"><span>unfinished tasks</span></div>
+              <div class="btn" id="complate"><span>accomplish all tasks</span></div>
+              <div class="btn" id="delete-done"><span>delete done tasks</span></div>
+              <div class="btn" id="delete-all"><span>delete all tasks</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Tasks Area -->
+        <div class="tasks-area">
+          <!--  -->
+
+          <!-- <div class="task-box">
+            <div class="task-box-content">
+              <div class="status">
+                <img src="image/icons8-ok-96.png" alt="" />
+              </div>
+              <div class="text">
+                <span>task one A Study Javascript</span>
+                <div class="task-date">08/21/2022 06:06 PM</div>
+              </div>
+            </div>
+            <div class="task-box-control">
+              <div class="done">
+                <span>done</span>
+                <img src="./image/icons8-pass-96.png" alt="" />
+              </div>
+              <div class="delete">
+                <span>delete</span>
+                <img src="./image/icons8-remove-96.png" alt="" />
+              </div>
+            </div>
+          </div> -->
+
+          <!--  -->
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

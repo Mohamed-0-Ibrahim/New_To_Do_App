@@ -1,0 +1,343 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* user-select: none; */
+}
+
+:root {
+  /* --bg-color-1: #bd62d0; */
+  /* --bg-color-1: #17184e; */
+  /* --bg-color-1: #5c5ba7; */
+  --bg-color-1: #5554a0;
+  --br-radius: 3px;
+}
+
+body {
+  background-image: url(../image/bg-purple.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Start Container
+-------------------------------------------------------- */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 767px) {
+  /* Mobile Screen */
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Small Screen */
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* midume Screen */
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Larg Screen */
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Container */
+
+/* Start Application */
+.application {
+  /* background-color: #fff; */
+  margin: 20px auto;
+  padding-bottom: 20px;
+  min-height: 85vh;
+  max-width: 800px;
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/*-- App Header Style --*/
+
+.app-header {
+  padding: 25px;
+  text-transform: capitalize;
+  background: rgba(248, 248, 248, 0.9);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.app-header-title {
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.app-header-img {
+  width: 28px;
+}
+
+/*-- Add New task Style --*/
+
+.app-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 25px;
+  /* background: rgba(255, 255, 255, 0.9); */
+}
+
+.app-info-input {
+  flex: 1;
+}
+
+.app-info-input input {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+}
+
+.app-info-input input,
+.app-info-button button {
+  height: 40px;
+  outline: none;
+}
+
+.app-info-button button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: var(--bg-color-1);
+  width: 100px;
+  border-radius: var(--br-radius);
+}
+
+.app-info-button button span {
+  color: white;
+  text-transform: capitalize;
+}
+
+.app-info-button button img {
+  width: 30px;
+}
+
+/*-- Tasks Search --*/
+
+.app-search {
+  padding: 0 25px;
+}
+
+.app-search input {
+  width: 100%;
+  border: 1px solid #ccc;
+  height: 40px;
+  padding: 0 15px;
+  outline: none;
+}
+
+/*-- Tasks Filter --*/
+
+.app-filter {
+  padding: 15px 25px;
+}
+
+.buttons-section {
+  max-width: 170px;
+  position: relative;
+}
+
+.buttons-section .btn-title {
+  border: 1px solid #ddd;
+}
+
+.buttons-section .btn-all {
+  width: 100%;
+  position: absolute;
+  top: 123%;
+  box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+  padding: 4px;
+  opacity: 0;
+  visibility: hidden;
+  background-color: white;
+}
+
+.buttons-section .btn-all::before {
+  content: "";
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #aaa transparent;
+  display: block;
+  position: absolute;
+  bottom: 100%;
+  right: 5px;
+}
+
+.buttons-section .btn-all.show {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.buttons-section .btn-title {
+  padding: 4px;
+}
+
+.buttons-section .btn-title span,
+.buttons-section .btn-all .btn span {
+  display: block;
+  padding: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: var(--bg-color-1);
+}
+
+.buttons-section .btn-title span {
+  color: white;
+  font-size: 15px;
+}
+
+.buttons-section .btn-title img {
+  width: 30px;
+}
+
+.buttons-section .btn-all .btn span {
+  font-size: 13px;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.buttons-section .btn-all .btn:hover span {
+  background-color: var(--bg-color-1);
+  color: white;
+}
+
+.buttons-section .btn-all .btn:not(:last-of-type) {
+  margin-bottom: 2px;
+}
+
+@media (max-width: 767px) {
+  .app-filter .buttons-section {
+    position: relative;
+    max-width: 100%;
+  }
+}
+
+/*-- Tasks Area --*/
+.tasks-area {
+  min-height: 40vh;
+  margin: 10px 25px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 0 5px 1px #ddd;
+}
+
+.task-box {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-box-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.task-box-content .status {
+  width: 21px;
+  height: 21px;
+  border: 1px solid #ddd;
+}
+
+.task-box-content .status img {
+  width: 100%;
+}
+
+.task-box-content .text span {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  color: #303030;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.task-box-content .text .task-date {
+  font-size: 11px;
+  margin-top: 10px;
+  color: #999;
+}
+
+.task-box .task-box-control {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.task-box .task-box-control .done,
+.task-box .task-box-control .delete {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: var(--br-radius);
+  cursor: pointer;
+}
+
+.task-box .task-box-control .done img,
+.task-box .task-box-control .delete img {
+  width: 25px;
+}
+
+.task-box .task-box-control .done span,
+.task-box .task-box-control .delete span {
+  text-transform: capitalize;
+  font-size: 13px;
+}
+
+.task-box .task-box-control .done {
+  background-color: #d7ff99;
+}
+.task-box .task-box-control .delete {
+  background-color: #ffdbdb;
+}
+
+@media (max-width: 767px) {
+  .task-box {
+    flex-wrap: wrap;
+  }
+  .task-box-content {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .task-box .task-box-control {
+    width: 100%;
+  }
+  .task-box .task-box-control .done,
+  .task-box .task-box-control .delete {
+    flex: 1;
+  }
+}
